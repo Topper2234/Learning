@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            transition: color 1s,transform 3s;
+            background-image: linear-gradient(to right,red,yellow);
+            border: none;
+            border-radius: 50px;
+        }
+        button:hover{
+            color:white;
+            transform: scale(5000%);
+        }
+    </style>
 </head>
 <body>
-    <h1>Cat is sigma</h1>
-    <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg" height="auto" width="300px"></img>
+    <h1 id="a"></h1>
+    <img id="sigma"  height="auto" width="300px"></img>
+    <div class="s">
+    <button onclick="document.getElementById('sigma').src = sigma[0],document.getElementById('a').innerHTML = 'Cat is not sigma'">not sigma</button>
+    <button onclick="document.getElementById('sigma').src = sigma[1],document.getElementById('a').innerHTML = 'Cat is sigma'">sigma</button>
+    </div>
+    <script>
+        const sigma = ["https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg","https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg"];
+        document.getElementById("sigma").src = sigma[0];
+        document.getElementById("a").innerHTML = "Cat is not sigma"
+    </script>
 </body>
 </html>
